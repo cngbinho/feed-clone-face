@@ -9,7 +9,7 @@ class PostList extends Component {
         id: 1,
         author: {
           name: "Julio Alcantara",
-          avatar: "http://url-da-imagem.com/imagem.jpg"
+          avatar: "bill"
         },
         date: "04 Jun 2019",
         content: "Pessoal, alguém sabe se a Rocketseat está contratando?",
@@ -18,25 +18,25 @@ class PostList extends Component {
             id: 1,
             author: {
               name: "Diego Fernandes",
-              avatar: "http://url-da-imagem.com/imagem.jpg"
+              avatar: "diego"
             },
-            content: "Conteúdo do comentário"
+            content: "Cara não sei mas sempre aprarece umas vagas lá."
           },
           {
-            id: 1,
+            id: 2,
             author: {
-              name: "João Madruga",
-              avatar: "http://url-da-imagem.com/imagem.jpg"
+              name: "Jeni",
+              avatar: "gatinha"
             },
-            content: "Conteúdo do comentário 2"
+            content: "Poxa semanada passada tinha uma vaga pra front."
           }
         ]
       },
       {
         id: 2,
         author: {
-          name: "Robson sousa",
-          avatar: "http://url-da-imagem.com/imagem.jpg"
+          name: "Fernando Moura",
+          avatar: "risadinha"
         },
         date: "04 Set 2019",
         content: "E ae pessoal como está os dev?",
@@ -45,9 +45,9 @@ class PostList extends Component {
             id: 1,
             author: {
               name: "Julio Alcantara",
-              avatar: "http://url-da-imagem.com/imagem.jpg"
+              avatar: "risadao"
             },
-            content: "Conteúdo do comentário"
+            content: "Cara tá amilhão muito dev em python aqui."
           }
         ]
       }
@@ -58,8 +58,7 @@ class PostList extends Component {
     return (
       <div className="postList">
         {this.state.posts.map(post => {
-          console.log(post);
-          return <Post key={post.id} props={post} />;
+          return <Post key={post.id} posts={post} />;
         })}
       </div>
     );
